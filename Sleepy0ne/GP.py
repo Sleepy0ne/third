@@ -1,12 +1,18 @@
+def hurt():
+  hits = 1
+  dmg = 80
+  hp = 50
+  hp -= dmg
+  print('Attack # ',hits,' DMG',dmg,'  HP',hp)
+  hits += 1
+  dmg += 4
+  if hp <=0:
+    print("GAME OVER!")
 def Player_stats(player):
   hp = 50
   Def = 20
   Attack = 15
   print("Hp: " + str(hp) + "Def: " + str(Def) + "Ak: " + str(Attack))
-#  end:
-  
-  if hp == 0:
-    print("GAME OVER")
 color_checker = [
   "Red", "orange", "yellow", "green", "blue", "indigo", "violet" ,"Black", "white" , "pink"
   ]
@@ -44,6 +50,7 @@ if "yes" in yesorno:
  if "Look around more" is choice:
   print("You take a better look at your surroundings. You find that on the ground are dead bodies in armor. The ground is burnt from a fire of sorts.")
   choice2 = input("What do you do?")
- if "investigate the clawmarks" is choice:
+ if "investigate the claw marks" is choice:
    print("You take a look at the marks. You have no idea what they are. You sit staring at them wondering what they are. You so focus on trying to firgure out what they are you don't notices what's behind you until you feel a cut go down the middle of your body.")
+   hurt()
    
