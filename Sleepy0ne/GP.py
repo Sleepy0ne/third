@@ -117,11 +117,11 @@ def deathinsta():
                       play_game
 
 
-def Player_stats(player):
+def Player_stats():
   hp = 50
   Def = 20
   Attack = 15
-  print("Hp: " + str(hp) + "Def: " + str(Def) + "Ak: " + str(Attack))
+  print("Hp:" + str(hp) + " Def:" + str(Def) + " Ak:" + str(Attack))
 color_checker = [
   "Red", "orange", "yellow", "green", "blue", "indigo", "violet" ,"Black", "white" , "pink"
   ]
@@ -138,28 +138,87 @@ def green(color):
   
   
 #The start
-
+import time
 name = input("Welcome, To begin. Please enter a Name. Let be known you will use this name all throught the game. ")
 
 yesorno = input(name + ", Are you sure this is the name you want? (Can't go back after you decide!)")
-
+if "no" in yesorno.lower():
+  print("Try again")
+  time.sleep(2)
+  name3 = input("Name?")
+  color_list()
+  color = input("Good, Now. What color? (Please pick from the Rainbow. Black and white are a choice too.)")
+  green(color)
+ 
+  print(color + (". Thank you for your time. Lets. Begin."))
+  time.sleep(4)
+  print("You wake awaken deep in forest agaisnt a tree. It seems you've forgotten everything but you name. Your name is " + name3 + ". You look around a bit to notice large claw marks agaisnt the trees and dirt.")
+ 
+  choice = input("What do you do? (run away, Look around more, investigate)")
+  time.sleep(3)
+  if "run away" is choice:
+    print("You enter fight or filght. But at the sight of the claw marks. You Book it in a random direction")
+ 
+  if "Look around more" is choice:
+    print("You take a better look at your surroundings. You find that on the ground are dead bodies in armor. The ground is burnt from a fire of sorts.")
+    time.sleep(3)
+    print("You hear as somethings gets near...")
+    time.sleep(3)
+    print"Your ready yourself for combat!"
+    Player_stats()  
+  if "investigate" is choice:
+   
+   print("You take a good look at the marks.") 
+   time.sleep(3)
+   
+   print("You have no idea what they are.") 
+   time.sleep(2)
+   
+   print("You sit puzzled.") 
+   time.sleep(1)
+   
+   print("Your so focused you lost track on what going on around you. It's too late now. Your slashed from behind by something heavy.")
+   time.sleep(5)
+   
+   print("You begin to bleed out as you fall to the ground.")
+   time.sleep(3)
+   
+   print("You no longer can feel the lower half of your body... It starts getting...Dark.")
+   time.sleep(5)
+   deathinsta()
+   
+   
 if "yes" in yesorno.lower():
  color_list()
  color = input("Good, Now. What color? (Please pick from the Rainbow. Black and white are a choice too.)")
  green(color)
  
  print(color + (". Thank you for your time. Lets. Begin."))
- 
+ time.sleep(4)
  print("You wake awaken deep in forest agaisnt a tree. It seems you've forgotten everything but you name. Your name is " + name + ". You look around a bit to notice large claw marks agaisnt the trees and dirt.")
  
  choice = input("What do you do? (run away, Look around more, investigate)")
+ time.sleep(3)
  if "run away" is choice:
   print("You enter fight or filght. But at the sight of the claw marks. You Book it in a random direction")
  
  if "Look around more" is choice:
   print("You take a better look at your surroundings. You find that on the ground are dead bodies in armor. The ground is burnt from a fire of sorts.")
-  choice2 = input("What do you do?")
+  time.sleep(3)
+  print("You hear as somethings gets near...")
+  time.sleep(3)
+  print("Your ready yourself for combat!")
+  Player_stats()
+  FIGHT! = input("(Slash: -15, Double tab: -35, heavy swing: -30.)")
+  
+  
  if "investigate" is choice:
    print("You take a look at the marks. You have no idea what they are. You sit staring at them wondering what they are. You so focus on trying to firgure out what they are you don't notices what's behind you until you feel a cut go down the middle of your body.")
+   time.sleep(2)
+   print("You begin to bleed out as you fall to the ground.")
+   time.sleep(3)
+   print("You no longer can feel the lower half of your body... It starts getting...Dark.")
+   time.sleep(5)
    deathinsta()
+   
    
