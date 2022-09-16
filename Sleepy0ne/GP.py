@@ -19,32 +19,47 @@ def deathinsta():
       if "Yes" in retry2.lower():
          (choice)
       if "No" in retry2:
+        
         print("Fine, We can sit here. All day.")
+        
         import time
         time.sleep(8)
+        
         print("Bored yet? Or is just sitting around more fun then playing the game?")
         time.sleep(10)
+        
+        
         print("I'm bored.Are you?")
         time.sleep(2)
+        
         print("No? I guess I'll wait.")
         time.sleep(12)
+        
         print("Sure would be nice to do something...")
+        
         print("If this game of my is not SO inteseting. Then let's look at other games.. like.. This.")
         time.sleep(1)
+        
         print("Give it a second...")
         time.sleep(4)
+        
         print("(You are given a finget spinner.)")
         time.sleep(3)
         SPIN = input("(Do you wish to spin the Finget spinner.) YES or no")
         if "YES" in SPIN.lower():
+          
           print("Congrats. You now are holding a spinning Finget spinner.")
           time.sleep(2)
+          
           print("You wanna do it again?")
           Spin2 = input("(Yes or No)")
           if "Yes" in Spin2.lower():
+            
             print("(You watch it spin faster)") 
             time.sleep(3)
+            
             print("This must be so funnn...")
+            
             print("You have fun with that")
             sping=1
             while sping < 10:
@@ -53,13 +68,18 @@ def deathinsta():
                 print("You spin it.")
                 sping += 1
                 if sping==10:
+                  
                   print("Done?")
+                  
                   print("Don't brother answering. I'm tired already of watching you mess with one of those.. Spinners...")
                   time.sleep(3)
+                  
                   print("Why are they popular anyways? They are so... Eh. All you do is spin it. There's no real joy in doing it.")
                   time.sleep(4)
+                  
                   print("How about something else.. Hm...")
                   time.sleep(6)
+                  
                   print("Here, How about some Rochambeau.")
                   
 
@@ -157,16 +177,23 @@ if "no" in yesorno.lower():
   choice = input("What do you do? (run away, Look around more, investigate)")
   time.sleep(3)
   if "run away" == choice.lower():
+    
     print("You enter fight or filght.") 
     time.sleep(2)
+    
     print("But at the sight of the claw marks. You Book it in a random direction.")
     time.sleep(4)
+    
     print("You hear something giving chase from behind!") 
     time.sleep(3)
+    
     print("Your start running faster! Watch out!")
     time.sleep(2)
+    
     print("(type whatever letter shows up!)")
+    
     import threading
+    
     import time
 
     def tt(name, num):
@@ -297,3 +324,4 @@ if "yes" in yesorno.lower():
    print("You no longer can feel the lower half of your body... It starts getting...Dark.")
    time.sleep(5)
    deathinsta()
+   
