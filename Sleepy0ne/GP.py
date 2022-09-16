@@ -10,13 +10,13 @@ def deathinsta():
     print("GAME OVER!")
     print("Try again?")
     retry=input("(Yes),(No)")
-    if "Yes" in retry:
-      print(choice)
-    if "No" in retry:
+    if "Yes" in retry.lower():
+      return(choice)
+    if "No" in retry.lower():
       print("Wh-What? You weren't suppose to just give up!")
       print("Please, Try again!")
       retry2 =input("(Yes),(Yes),(No)")
-      if "Yes" in retry2:
+      if "Yes" in retry2.lower():
          (choice)
       if "No" in retry2:
         print("Fine, We can sit here. All day.")
@@ -36,12 +36,12 @@ def deathinsta():
         print("(You are given a finget spinner.)")
         time.sleep(3)
         SPIN = input("(Do you wish to spin the Finget spinner.) YES or no")
-        if "YES" in SPIN:
+        if "YES" in SPIN.lower():
           print("Congrats. You now are holding a spinning Finget spinner.")
           time.sleep(2)
           print("You wanna do it again?")
           Spin2 = input("(Yes or No)")
-          if "Yes" in Spin2:
+          if "Yes" in Spin2.lower():
             print("(You watch it spin faster)") 
             time.sleep(3)
             print("This must be so funnn...")
@@ -156,17 +156,76 @@ if "no" in yesorno.lower():
  
   choice = input("What do you do? (run away, Look around more, investigate)")
   time.sleep(3)
-  if "run away" is choice:
-    print("You enter fight or filght. But at the sight of the claw marks. You Book it in a random direction")
+  if "run away" == choice.lower():
+    print("You enter fight or filght.") 
+    time.sleep(2)
+    print("But at the sight of the claw marks. You Book it in a random direction.")
+    time.sleep(4)
+    print("You hear something giving chase from behind!") 
+    time.sleep(3)
+    print("Your start running faster! Watch out!")
+    time.sleep(2)
+    print("(type whatever letter shows up!)")
+    import threading
+    import time
+
+    def tt(name, num):
+        while True:
+          num += 0.5
+          print('thread ' + str(name) + ' at time ' + str(num))
+          time.sleep(0.5)
+
+
+    for i in range(3):
+      t=threading.Thread(target=tt, args=(i, 0))
+      setDaemon()
+      t.start()
+      t.join(timeout=1)
+
+    
+    import random
+    time.sleep(2)
+    l = ["w", "a", "s", "d"]
+    dodge=input(random.choice(l)) + ("\n ")
+    
+      
+    if dodge is dodge == dodge:
+      
+      print("test")
+    if dodge is not dodge == dodge:
+      
+      print("You try dodge out the wait but you fall trip.")
+      time.sleep(3)
+      
+      print("Now, you turn over to see this beast. It looks to be a mix of serveal animals.")
+      time.sleep(4)
+      
+      print("You crowd if fear as this beast swings down at you.")
+      time.sleep(3)
+      
+      print("Everything..Goes...Dark..")
+      time.sleep(3)
+      
+      deathinsta()
+    
+     
+
  
-  if "Look around more" is choice:
+  if "Look around more" == choice:
+    
     print("You take a better look at your surroundings. You find that on the ground are dead bodies in armor. The ground is burnt from a fire of sorts.")
+    
     time.sleep(3)
+    
     print("You hear as somethings gets near...")
+    
     time.sleep(3)
-    print"Your ready yourself for combat!"
+    
+    print("Your ready yourself for combat!")
+    
     Player_stats()  
-  if "investigate" is choice:
+  
+  if "investigate" == choice:
    
    print("You take a good look at the marks.") 
    time.sleep(3)
@@ -191,7 +250,6 @@ if "no" in yesorno.lower():
 if "yes" in yesorno.lower():
  color_list()
  color = input("Good, Now. What color? (Please pick from the Rainbow. Black and white are a choice too.)")
- green(color)
  
  print(color + (". Thank you for your time. Lets. Begin."))
  time.sleep(4)
@@ -199,26 +257,43 @@ if "yes" in yesorno.lower():
  
  choice = input("What do you do? (run away, Look around more, investigate)")
  time.sleep(3)
- if "run away" is choice:
+ if "run away" == choice.lower():
   print("You enter fight or filght. But at the sight of the claw marks. You Book it in a random direction")
  
- if "Look around more" is choice:
+ if "Look around more" == choice.lower():
+  
   print("You take a better look at your surroundings. You find that on the ground are dead bodies in armor. The ground is burnt from a fire of sorts.")
+  
   time.sleep(3)
+  
   print("You hear as somethings gets near...")
+  
   time.sleep(3)
+  
   print("Your ready yourself for combat!")
+  
   Player_stats()
-  FIGHT! = input("(Slash: -15, Double tab: -35, heavy swing: -30.)")
+  
+  FIGHT = input("(Slash: -15, Double tab: -35, Heavy Swing: -30.)")
   
   
- if "investigate" is choice:
-   print("You take a look at the marks. You have no idea what they are. You sit staring at them wondering what they are. You so focus on trying to firgure out what they are you don't notices what's behind you until you feel a cut go down the middle of your body.")
+  
+ if "investigate" == choice.lower():
+   print("You take a good look at the marks.") 
+   time.sleep(3)
+   
+   print("You have no idea what they are.") 
    time.sleep(2)
+   
+   print("You sit puzzled.") 
+   time.sleep(1)
+   
+   print("Your so focused you lost track on what going on around you. It's too late now. Your slashed from behind by something heavy.")
+   time.sleep(5)
+   
    print("You begin to bleed out as you fall to the ground.")
    time.sleep(3)
+   
    print("You no longer can feel the lower half of your body... It starts getting...Dark.")
    time.sleep(5)
    deathinsta()
-   
-   
